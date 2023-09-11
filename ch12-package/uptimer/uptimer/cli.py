@@ -22,8 +22,7 @@ def main(urls, daemon):
 
     while True:
         for url in urls:
-            status_code = check_url(url)
-            if status_code:
+            if status_code := check_url(url):
                 colorize_status(url, status_code)
         if not daemon:
             break

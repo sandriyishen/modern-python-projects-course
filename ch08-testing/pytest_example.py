@@ -6,8 +6,8 @@ class TestStringMethods:
         assert "foo".upper() == "FOO"
 
     def test_isupper(self):
-        assert "foo".isupper() is True, "Foo is not upper!"
-        assert "Foo".isupper() is False
+        assert "foo".isupper(), "Foo is not upper!"
+        assert not "Foo".isupper()
 
     # @pytest.mark.slow
     def test_split(self):
